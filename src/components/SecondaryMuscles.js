@@ -17,7 +17,7 @@ const SecondaryMuscles = ({ item, setBodyPart, bodyPart}) => {
             width: '250px',
             height: '150px',
             cursor: 'pointer',
-            gap: '47px',
+            gap: '25px',
            
         }}
         onClick={() => {
@@ -27,7 +27,7 @@ const SecondaryMuscles = ({ item, setBodyPart, bodyPart}) => {
     >
         <img src={Icon}
         alt="dumbbell"
-        style={{ width:'40px', height: '40px'}}
+        style={{ width:'40px', height: '40px', margin: '20px'}}
         />
         <Typography fontSize="24px" fontWeight="bold" color='#3A1212' textTransform="capitalize">{item.SecondaryMuscles}</Typography>
     </Stack>
