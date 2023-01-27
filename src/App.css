@@ -85,11 +85,13 @@ body {
   .bodyPart-card {
     transform: scale(1, 1);
     transition: 0.3s all ease-in-out;
+    
   }
   
   .exercise-card:hover,
   .bodyPart-card:hover {
     transform: scale(1.1, 1.1);
+    
   }
   
   .search-btn:hover {
@@ -115,7 +117,10 @@ body {
   
     .react-horizontal-scrolling-menu--scroll-container {
       width: 500px;
+
+      
     }
+    
   
     .left-arrow,
     .right-arrow {
