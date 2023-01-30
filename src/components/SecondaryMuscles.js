@@ -29,7 +29,7 @@ const SecondaryMuscles = ({ item, setBodyPart, bodyPart }) => {
                 alt="dumbbell"
                 style={{ width: '40px', height: '40px', margin: '20px' }}
             />
-            <Typography fontSize="24px" fontWeight="bold" color='#3A1212' textTransform="capitalize">{item.SecondaryMuscles}</Typography>
+            <Typography fontSize="24px" fontWeight="bold" color='#3A1212' textTransform="capitalize">{item}</Typography>
         </Stack>
     )
 }

@@ -11,7 +11,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
 
   useEffect(() => {
     const fecthExerciesData = async () => {
-      const bodyPartsData = await fetchData('https://exerciseapi3.p.rapidapi.com/search/?primaryMuscle=pectoralis%20major', exercisesOptions);
+      const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exercisesOptions);
 
       setBodyParts(['all', ...bodyPartsData])
     }
@@ -23,12 +23,13 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
 
   const handleSearch = async () => {
     if (search) {
-      const exercisesData = await fetchData('https://exerciseapi3.p.rapidapi.com/search/?primaryMuscle=pectoralis%20major', exercisesOptions);
+      const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exercisesOptions);
 
       const searchedExercises = exercisesData.filter(
-        (exercises) => exercises.Name.toLowerCase().includes(search)
-          || exercises.Type.toLowerCase().includes(search)
-          || exercises.Force.toLowerCase().includes(search)
+        (exercises) => exercises.name.toLowerCase().includes(search)
+          || exercises.bodyPart.toLowerCase().includes(search)
+          || exercises.target.toLowerCase().includes(search)
+          || exercises.equipment.toLowerCase().includes(search)
       )
 
       setSearch('');
@@ -88,8 +89,10 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
          bodyPart={bodyPart}
          setBodyPart={setBodyPart} />
       </Box>
+      
 
     </Stack>
+    
   )
 }
 

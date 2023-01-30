@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button, Stack, Typography } from '@mui/material';
 
-const ExerciseCard = () => {
+const ExerciseCard = ({exercises}) => {
   return (
-    <div>ExerciseCard</div>
+    <Link className='exercise-card' >
+   <img src={exercises.gifUrl} alt={exercises.name} loading="lazy" />
+    </Link>
   )
 }
 
