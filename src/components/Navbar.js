@@ -26,7 +26,7 @@ const Navbar = () => {
       alignItems="flex-end"
       >
         <Link to="/" style={{ textDecoration: 'none', color: '#ff2625'}} > HOME </Link>
-        <a href='#exercises' style={{
+        <a href='/exercise' style={{
           testDecoration: 'none', color: '#3a1212'
         }}>EXERCISES</a>
       </Stack>
